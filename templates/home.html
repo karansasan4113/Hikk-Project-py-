@@ -1,0 +1,57 @@
+{% extends "base.html" %} {%block content%}
+{%load static%}
+
+{%block css%}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}" id="main-stylesheet">
+
+{%endblock css%}
+
+<main>
+    <div class="content">
+        <!-- Your page content goes here -->
+
+        <!--home page image-->
+        <div class="home-main-img">
+            <img src="{%static 'assets/home_background.jpg' %}" alt="reload the site">
+        </div>
+        <!--home page products-->
+        <div class="home-page-products-container">
+            <div id="home-page-products">
+                <a href="#"> <img src="{%static 'assets/t-shirt.jpg.webp'%}" alt="reload...">
+
+                    <li id="home-product-name">T-shirts</li>
+                    <li id="home-product-selection">Explore the Selection</li>
+                </a>
+            </div>
+            <div id="home-page-products">
+                <a href="#">
+                    <img src="{%static 'assets/sweatshirt-jpg.webp' %}" alt="reload...">
+
+                    <li id="home-product-name">Sweatshirts</li>
+                    <li id="home-product-selection">Explore the Selection</li>
+                </a>
+            </div>
+            <div id="home-page-products">
+                <a href="#">
+                    <img src="{% static 'assets/hoddie.jpg.webp' %}" alt="reload...">
+
+                    <li id="home-product-name">Hoodies</li>
+                    <li id="home-product-selection">Explore the Selection</li>
+                </a>
+            </div>
+        </div>
+
+        <div class="home-page-collections">
+            <img src="{% static 'assets/home-collection.jpg.webp' %}" alt="">
+
+            <a href="#">
+                <div id="home-page-collection-view">VIEW</div>
+            </a>
+        </div>
+    </div>
+</main>
+
+
+{%endblock content%}

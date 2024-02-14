@@ -1,0 +1,114 @@
+
+
+
+{% extends "base.html" %} {%block content%}
+{%load static%}
+
+ {%block css%}
+ <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+ <link rel="stylesheet" href="{% static 'css/dark-nav.css' %}">
+ {%endblock css%}
+
+
+
+<main>
+
+    <div class="genral-contact">
+        <p>
+            If you have any queries, please do not hesitate to contact us.
+        </p>
+
+
+        <div id="contact-method">
+            Telephone
+        </div>
+        <div id="contact">
+            <p>
+                Kindly note that not all numbers may be accessible or covered by all mobile phone networks. Please also
+                be
+                mindful that we may monitor or record your communications for training and quality control purposes:
+            </p>
+            <p>
+                Contact us:
+            </p>
+
+            <p>
+                000 800 100 5815
+            </p>
+
+            <p>
+                Our Client Advisors are available Monday-Saturday, Bam - 7pm (GMT/BST) and Sunday, 9am-5.30pm (GMT/BST),
+                excluding holidays
+            </p>
+
+
+        </div>
+        <div id="contact-method">
+
+            Whatsapp
+
+
+        </div>
+        <div id="contact">
+            <p>
+                Click To WhatsApp
+            </p>
+
+
+        </div>
+        <div id="contact-method">
+
+            Email
+        </div>
+        <div id="contact">
+            <p>
+                customerservice@hikk.com
+            </p>
+
+        </div>
+    </div>
+
+    <div class="page-width">
+        <h2 class="visually-hidden">Contact form</h2>
+        <form method="post" action="/contact#ContactForm" id="ContactForm" accept-charset="UTF-8" class="isolate">
+            <input type="hidden" name="form_type" value="contact">
+            <input type="hidden" name="utf8" value="✓">
+            <div class="contact__fields">
+                <div class="field">
+                    <input class="field__input" autocomplete="name" type="text" id="ContactForm-name"
+                        name="contact[Name]" value="" placeholder="Name">
+                    <label class="field__label" for="ContactForm-name"></label>
+                </div>
+                <div class="field field--with-error">
+                    <input autocomplete="email" type="email" id="ContactForm-email" class="field__input"
+                        name="contact[email]" spellcheck="false" autocapitalize="off" value="" aria-required="true"
+                        placeholder="Email">
+                    <label class="field__label" for="ContactForm-email">
+                        <span aria-hidden="true"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel"
+                    name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="Phone number">
+                <label class="field__label" for="ContactForm-phone"></label>
+            </div>
+            <div class="field">
+                <textarea rows="10" id="ContactForm-body" class="text-area field__input" name="contact[Comment]"
+                    placeholder="Comment"></textarea>
+                <label class="form__label field__label" for="ContactForm-body"></label>
+            </div>
+            <div class="contact__button">
+                <button type="submit" class="button">
+                    Send
+                </button>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+
+
+<!-- <script src="{% static 'js/orderstatus.js' %}"></script> -->
+{%endblock content%}

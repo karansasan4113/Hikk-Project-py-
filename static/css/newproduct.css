@@ -1,0 +1,85 @@
+
+/* favourite clothes start here*/
+.favourite-heading {
+    padding-top: 100px;
+    padding-left: 60px;
+}
+
+/* Product container */
+.home-page-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow products to wrap to the next line */
+    gap: 20px;
+    /* Add gap between products */
+    padding: 20px;
+}
+
+/* Product */
+.product {
+    flex-basis: calc(33.33% - 20px);
+    /* Set width for each product, considering gap */
+    /* border: 1px solid #ccc;*/
+    /* Add border around products */
+    /* border-radius: 5px; */
+    /* padding: 10px; */
+}
+
+/* Product image */
+.product img {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Product name */
+#home-product-name {
+    display: flex;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: black;
+    margin-bottom: 5px;
+    /* Add space between product name and price */
+}
+
+#home-page-products li {
+    list-style: none;
+    padding-top: 20px;
+
+}
+
+/* Product selection */
+#home-product-selection {
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #000000;
+    /* Change color for price */
+    padding-bottom: 30px;
+}
+
+#home-page-products a {
+    text-decoration: none;
+
+}
+
+/* Favourite icon */
+
+
+/*favourite products display            END */
+
+
+.active {
+    display: block;
+    /* Show the active product section */
+}
+
+
+
+.straight-line {
+    border-top: 1px solid black;
+    /* You can adjust the color and thickness as needed */
+}
+
+#favourite-icon {
+    padding-left: 320px;
+}

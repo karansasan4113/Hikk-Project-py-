@@ -1,0 +1,320 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+
+    {%block css%} {%endblock css%}
+
+</head><header>
+    <div class="overlay" onclick="closeSidebar(event)"></div>
+    <div class="right-overlay" onclick="closerightSidebar(event)"></div>
+
+    <!--navigation top of home page-->
+
+    <nav>
+        <section class="navigation" id="navbar">
+            <div class="nav-box1"><!-- left side box-->
+
+                <a id="menu-bar" onclick="toggleSidebar(event)">
+                    <svg width="30px" height="30px" viewBox="0 0 21.00 21.00" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" stroke="white" stroke-width="0.441">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="1.596"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m4.5 6.5h12"></path>
+                                <path d="m4.498 10.5h11.997"></path>
+                                <path d="m4.5 14.5h11.995"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    Menu
+                </a>
+
+                <a href="" id="search-lens"><!-- search bar icon or text-->
+                    <svg width="64px" height="64px" viewBox="0 0 24.00 24.00" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M19.9604 11.4802C19.9604 13.8094 19.0227 15.9176 17.5019 17.4512C16.9332 18.0247 16.2834 18.5173 15.5716 18.9102C14.3594 19.5793 12.9658 19.9604 11.4802 19.9604C6.79672 19.9604 3 16.1637 3 11.4802C3 6.79672 6.79672 3 11.4802 3C16.1637 3 19.9604 6.79672 19.9604 11.4802Z"
+                                stroke="#ffffff" stroke-width="0.528" fill="none"></path>
+                            <path d="M18.1553 18.1553L21.8871 21.8871" stroke="#ffffff" stroke-width="0.528"
+                                stroke-linecap="round"></path>
+                        </g>
+                    </svg>
+
+                    Search
+                </a>
+
+            </div>
+            <!-- center box heading-->
+            <div class="nav-box2">
+                <a href="/home1">
+                    <div id="brand-name">H I K K</div><!--brand name-->
+                </a>
+
+            </div>
+
+            <div class="nav-box3">
+
+
+
+                <div id="my-cart" onclick="togglerightSidebar(event)">My Cart</div>
+
+
+
+
+
+
+
+                <a href="favourite.html" id="wishlist">Wishlist</a><!-- wishlist text-->
+            </div>
+        </section>
+
+
+        <div id="right-sidebar">
+            <!-- Your sidebar content -->
+            <div id="right-close-button" onclick="closerightSidebar()">Close</div>
+            <!-- My Cart section -->
+            <div class="cart-item">
+                <div class="product1">
+
+
+                    <div class="product-image">
+                        <!-- Product image goes here -->
+                        <img src="static/assets/hoddie.jpg.webp" alt="">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-name-cost">
+                            <div id="product-name">MUSTARD SHIZEN T-SHIRT</div>
+                            <div id="product-cost">49905</div>
+                        </div>
+                        <div class="size">Size:XXXS</div>
+                        <div class="price-container">
+
+                            <span id="product-price" class="price" data-unit-price="4995">RS. 4,995</span>
+                        </div>
+                        <div class="add-delete-minus">
+
+
+                            <div class="quantity-controls">
+                                <button class="decrease-btn" onclick="decreaseQuantity('price')">-</button>
+                                <span class="quantity" id="quantity">1</span>
+                                <button class="increase-btn" onclick="increaseQuantity('price')">+</button>
+                            </div>
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="product1">
+
+
+                    <div class="product-image">
+                        <!-- Product image goes here -->
+                        <img src="static/assets/hoddie.jpg.webp" alt="">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-name-cost">
+                            <div id="product-name">MUSTARD SHIZEN T-SHIRT</div>
+                            <div id="product-cost">49905</div>
+                        </div>
+                        <div class="size">Size:XXXS</div>
+                        <div class="price-container">
+
+                            <span id="product-price" class="price" data-unit-price="4995">RS. 4,995</span>
+                        </div>
+                        <div class="add-delete-minus">
+
+
+                            <div class="quantity-controls">
+                                <button class="decrease-btn" onclick="decreaseQuantity('price')">-</button>
+                                <span class="quantity" id="quantity">1</span>
+                                <button class="increase-btn" onclick="increaseQuantity('price')">+</button>
+                            </div>
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="product1">
+
+
+                    <div class="product-image">
+                        <!-- Product image goes here -->
+                        <img src="static/assets/hoddie.jpg.webp" alt="">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-name-cost">
+                            <div id="product-name">MUSTARD SHIZEN T-SHIRT</div>
+                            <div id="product-cost">49905</div>
+                        </div>
+                        <div class="size">Size:XXXS</div>
+                        <div class="price-container">
+
+                            <span id="product-price" class="price" data-unit-price="4995">RS. 4,995</span>
+                        </div>
+                        <div class="add-delete-minus">
+
+
+                            <div class="quantity-controls">
+                                <button class="decrease-btn" onclick="decreaseQuantity('price')">-</button>
+                                <span class="quantity" id="quantity">1</span>
+                                <button class="increase-btn" onclick="increaseQuantity('price')">+</button>
+                            </div>
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="product1">
+
+
+                    <div class="product-image">
+                        <!-- Product image goes here -->
+                        <img src="static/assets/hoddie.jpg.webp" alt="">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-name-cost">
+                            <div id="product-name">MUSTARD SHIZEN T-SHIRT</div>
+                            <div id="product-cost">49905</div>
+                        </div>
+                        <div class="size">Size:XXXS</div>
+                        <div class="price-container">
+
+                            <span id="product-price" class="price" data-unit-price="4995">RS. 4,995</span>
+                        </div>
+                        <div class="add-delete-minus">
+
+
+                            <div class="quantity-controls">
+                                <button class="decrease-btn" onclick="decreaseQuantity('price')">-</button>
+                                <span class="quantity" id="quantity">1</span>
+                                <button class="increase-btn" onclick="increaseQuantity('price')">+</button>
+                            </div>
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="product1">
+
+
+                    <div class="product-image">
+                        <img src="static/assets/hoddie.jpg.webp" alt="">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-name-cost">
+                            <div id="product-name">MUSTARD SHIZEN T-SHIRT</div>
+                            <div id="product-cost">49905</div>
+                        </div>
+                        <div class="size">Size:XXXS</div>
+                        <div class="price-container">
+
+                            <span id="product-price" class="price" data-unit-price="4995">RS. 4,995</span>
+                        </div>
+                        <div class="add-delete-minus">
+
+
+                            <div class="quantity-controls">
+                                <button class="decrease-btn" onclick="decreaseQuantity('price')">-</button>
+                                <span class="quantity" id="quantity">1</span>
+                                <button class="increase-btn" onclick="increaseQuantity('price')">+</button>
+                            </div>
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="product1">
+
+
+                    <div class="product-image">
+                        <!-- Product image goes here -->
+                        <img src="static/assets/hoddie.jpg.webp" alt="">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-name-cost">
+                            <div id="product-name">MUSTARD SHIZEN T-SHIRT</div>
+                            <div id="product-cost">49905</div>
+                        </div>
+                        <div class="size">Size:XXXS</div>
+                        <div class="price-container">
+
+                            <span id="product-price" class="price" data-unit-price="4995">RS. 4,995</span>
+                        </div>
+                        <div class="add-delete-minus">
+
+
+                            <div class="quantity-controls">
+                                <button class="decrease-btn" onclick="decreaseQuantity('price')">-</button>
+                                <span class="quantity" id="quantity">1</span>
+                                <button class="increase-btn" onclick="increaseQuantity('price')">+</button>
+                            </div>
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="checkout-container">
+
+                <button id="checkout-button" onclick="checkout()">Checkout</button>
+            </div>
+
+        </div>
+
+
+
+        <section id="sidebar">
+            <!-- Your sidebar content -->
+            <div id="close-button" onclick="closeSidebar()">Close</div>
+            <ul>
+                <li><a href="/myaccount">My Account</a></li>
+             
+                <li><a href="/orderstatus">Your Order</a></li>
+                <li><a href="/newproduct">Whats New</a></li>
+                <li><a href="/allproducts">All Products</a></li>
+                <li><a href="/favourite">Favourite</a></li>
+              
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/faq">FAQs</a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+<body>
+
+
+
+    {%block content%} {%endblock content%}
+    <script src="{% static 'js/nav.js' %}"></script>
+</body>
+
+
+</html>

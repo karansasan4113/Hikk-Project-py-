@@ -1,0 +1,39 @@
+
+
+
+{% extends "base.html" %} {%block content%}
+{%load static%}
+
+ {%block css%}
+ <link rel="stylesheet" href="{% static 'css/orderstatus.css' %}">
+ <link rel="stylesheet" href="{% static 'css/dark-nav.css' %}">
+ {%endblock css%}
+
+
+
+<main>
+    <div id="top">
+    <h1>Track Your Order</h1>
+
+    <div class="track-order-container">
+        <input type="text" id="orderID" placeholder="Enter your order ID">
+        <button onclick="trackOrder()">Track</button>
+    </div>
+
+    <h1>Order Status</h1>
+    <div class="order-navigation">
+        <button onclick="showCurrentOrders()">Current Orders</button>
+        <button onclick="showPastOrders()">Past Orders</button>
+    </div>
+    <div class="order-status" id="orderStatus">
+        <!-- Order status will be dynamically populated here -->
+        <ul class="order-cards"></ul>
+    </div>
+</div>
+</main>
+
+
+
+
+<script src="{% static 'js/orderstatus.js' %}"></script>
+{%endblock content%}
