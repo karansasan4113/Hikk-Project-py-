@@ -41,10 +41,11 @@ urlpatterns = [
     path('orderstatus', views.orderstatus, name='orderstatus'),
     path('newproduct', views.newproduct, name='newproduct'),
     path('allproducts', views.allproducts, name='allproducts'),
-     path('favourite', views.favourite, name='favourite'),
-       path('contact', views.contact, name='contact'),
-         path('faq', views.faq, name='faq'),
-              path('checkout', views.checkout, name='checkout'),
+    path('favourite', views.favourite, name='favourite'),
+    path('contact', views.contact, name='contact'),
+    path('faq', views.faq, name='faq'),
+    path('checkout', views.checkout, name='checkout'),
+    path('productpage', views.productpage, name='productpage'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

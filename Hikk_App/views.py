@@ -32,3 +32,6 @@ def faq(request):
 
 def checkout(request):
     return render(request, 'checkout.html')
+
+def productpage(request):
+    return render(request, 'productpage.html')
